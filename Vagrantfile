@@ -28,7 +28,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--audio", "none"]
       vb.customize ['modifyvm', :id, '--usb', 'on']
       vb.customize ['modifyvm', :id, '--usbehci', 'on']
+      # Yubikey 5 NFC
       vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'YubiKey OTP+FIDO+CCID', '--vendorid', '0x1050', '--productid', '0x0407']
     end
   end
+
+  config.vm.provision :shell, path: "bootstrap.sh"
 end

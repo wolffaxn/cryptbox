@@ -33,5 +33,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-  config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :shell, privileged: false, path: "bootstrap.sh"
 end

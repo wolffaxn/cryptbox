@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Ubuntu 20.04 cloud image for vagrant
   config.vm.box = "ubuntu/focal64"
   # https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64-vagrant.box
-  config.vm.box_version = "20201016.0.0"
+  config.vm.box_version = "20201111.0.1"
 
   # create wireguard node
   config.vm.define :box do |box|
